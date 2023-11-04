@@ -103,3 +103,4 @@ public
 # Misc
 .DS_Store
 Thumbs.db
+./logs
