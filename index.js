@@ -20,7 +20,7 @@ function main() {
             data.items.forEach(item => {
                 const title = item.title || 'No Title';
                 const url = item.canonical && item.canonical.length > 0 ? item.canonical[0].href : 'No URL';
-                const message = `<b>${escapeHTML(title)}</b>\n<a href="${url}">Read more</a>`;
+                const message = `<b>${escapeHTML(title)}</b>\n${escapeHTML(url)}`;
 
     
                 sendMessageToChannel(message);
