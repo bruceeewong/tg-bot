@@ -18,7 +18,9 @@ router.post("/", (req, res) => {
         item.canonical && item.canonical.length > 0
           ? item.canonical[0].href
           : "No URL";
-      const message = `<b>${escapeHTML(title)}</b>\n${escapeHTML(url)}`;
+      const message = `<b>[Inoreader] ${escapeHTML(title)}</b>\n${escapeHTML(
+        url
+      )}`;
 
       sendMessageToChannel(message);
     });
